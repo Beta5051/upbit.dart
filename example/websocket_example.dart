@@ -4,7 +4,7 @@ import 'package:upbit/websocket.dart';
 void main() {
   final upbit = UpBit();
 
-  upbit.useWebSocket();
+  upbit.connectWebSocket();
 
   upbit.webSocket.onData.listen((data) {
     print(data);
