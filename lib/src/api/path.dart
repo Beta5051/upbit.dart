@@ -1,0 +1,11 @@
+const ENDPOINT = 'api.upbit.com';
+const GET_MARKETS_PATH = 'v1/market/all';
+const CANDLES_PATH = 'v1/candles';
+final GET_MINUTES_CANDLES_PATH = (int minutes) => '$CANDLES_PATH/minutes/$minutes';
+const GET_DAYS_CANDLES_PATH = '$CANDLES_PATH/days';
+const GET_WEEKS_CANDLES_PATH = '$CANDLES_PATH/weeks';
+const GET_MONTHS_CANDLES_PATH = '$CANDLES_PATH/months';
+const GET_TRADES_PATH = '/v1/trades/ticks';
+const GET_TICKERS_PATH = '/v1/ticker';
+const GET_ORDER_BOOKS_PATH = '/v1/orderbook';
+const WEBSOCKET_PATH = '/websocket/v1';

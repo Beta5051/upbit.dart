@@ -1,23 +1,31 @@
-class UpBitException {
+class APIException {
+  final int name;
+  final String message;
+
+  APIException({required this.name, required this.message});
+
+  factory APIException.fromJson(Map<String, dynamic> json) {
+    return APIException(
+      name: json['error']['name'],
+      message: json['error']['message'],
+    );
+  }
+
+  toString() => '[APIException] $name: $message';
+}
+
+class WebSocketException {
   final String name;
   final String message;
 
-  UpBitException(this.name, this.message);
+  WebSocketException({required this.name, required this.message});
 
-  factory UpBitException.fromMap(Map<String, dynamic> map) {
-    final error = map['error']!;
-    return UpBitException(error['name']!, error['message']!);
+  factory WebSocketException.fromJson(Map<String, dynamic> json) {
+    return WebSocketException(
+      name: json['error']['name'],
+      message: json['error']['message'],
+    );
   }
 
-  Map<String, dynamic> toMap() {
-    return {
-      'error': {
-        'name': name,
-        'message': message,
-      }
-    };
-  }
-
-  @override
-  String toString() => '[UpBitException] name: $name message: $message';
+  toString() => '[WebSocketException] $name: $message';
 }
