@@ -14,11 +14,11 @@ void main() {
   });
 
   upbit.webSocket.requestData(Field(
-      typeFields: [
-        TypeField(
-            type: Type.TICKER,
-            codes: ['KRW-BTC'],
-        ),
-      ],
+    typeFields: [
+      TypeField(
+        type: Type.TICKER,
+        codes: ['KRW-BTC'],
+      ),
+    ],
   ));
 }
