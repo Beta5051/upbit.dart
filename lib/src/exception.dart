@@ -1,12 +1,12 @@
 class APIException {
-  final int name;
+  final String name;
   final String message;
 
   APIException({required this.name, required this.message});
 
   factory APIException.fromJson(Map<String, dynamic> json) {
     return APIException(
-      name: json['error']['name'],
+      name: json['error']['name'].toString(),
       message: json['error']['message'],
     );
   }
@@ -22,7 +22,7 @@ class WebSocketException {
 
   factory WebSocketException.fromJson(Map<String, dynamic> json) {
     return WebSocketException(
-      name: json['error']['name'],
+      name: json['error']['name'].toString(),
       message: json['error']['message'],
     );
   }

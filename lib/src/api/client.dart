@@ -15,7 +15,7 @@ class APIClient {
 
   APIClient({this.access_key, this.secret_key});
 
-  Future<T> call<T>({APIType type = APIType.GET, required String path, Map<String, dynamic>? data}) async {
+  Future<T> call<T>({APIType type = APIType.GET, required String path, Map<String, dynamic>? data, bool useToken = false}) async {
     if (data != null && data.isNotEmpty) {
       data.removeWhere((_, value) => value == null);
       data.forEach((key, value) {
@@ -28,6 +28,18 @@ class APIClient {
     }
     final uri = Uri.http(ENDPOINT, path, data);
     final request = http.Request(EnumToString(type), uri);
+
+    if (useToken) {
+      if (access_key == null) {
+        throw APIException(name: 'UNKNOWN_KEY', message: 'access_key is null');
+      }
+      if (secret_key == null) {
+        throw APIException(name: 'UNKNOWN_KEY', message: 'secret_key is null');
+      }
+
+      final token = GenerateToken(access_key!, secret_key!, uri.query);
+      request.headers.addAll({'Authorization': 'Bearer $token'});
+    }
 
     final responseStream = await _client.send(request);
     final response = await http.Response.fromStream(responseStream);
