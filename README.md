@@ -1,4 +1,5 @@
-# upbit
+# upbit.dart
+구조 자체를 갈아 엎는중...
 
 - [x] Quotation
 - [ ] Exchange

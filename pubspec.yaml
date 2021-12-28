@@ -1,5 +1,5 @@
 name: upbit
-description: upbit API
+description: UPBIT(업비트) API
 version: 0.1.0
 
 repository: https://github.com/Beta5051/upbit.dart
