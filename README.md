@@ -1,5 +1,5 @@
 # upbit.dart
-구조 자체를 갈아 엎는중...
+![Pub Version](https://img.shields.io/pub/v/upbit)
 
 - [x] Quotation
 - [ ] Exchange
