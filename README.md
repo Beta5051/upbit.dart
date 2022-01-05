@@ -1,5 +1,4 @@
-# upbit
-![Pub Version](https://img.shields.io/pub/v/upbit)
+# upbit [![Pub Version](https://img.shields.io/pub/v/upbit)](https://pub.dev/packages/upbit)
 
 - [x] Quotation
 - [ ] Exchange
