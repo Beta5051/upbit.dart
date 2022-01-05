@@ -1,4 +1,4 @@
-import 'package:upbit/upbit_dart.dart';
+import 'package:upbit/upbit.dart';
 import 'package:upbit/websocket.dart';
 
 void main() {

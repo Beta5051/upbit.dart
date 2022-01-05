@@ -1,4 +1,4 @@
-# upbit.dart
+# upbit
 ![Pub Version](https://img.shields.io/pub/v/upbit)
 
 - [x] Quotation
@@ -8,7 +8,7 @@
 # Example
 ## Quotation
 ```dart
-import 'package:upbit/upbit_dart.dart';
+import 'package:upbit/upbit.dart';
 import 'package:upbit/quotation.dart';
 
 void main() async {
@@ -22,7 +22,7 @@ void main() async {
 
 ## WebSocket
 ```dart
-import 'package:upbit/upbit_dart.dart';
+import 'package:upbit/upbit.dart';
 import 'package:upbit/websocket.dart';
 
 void main() {

@@ -1,5 +1,4 @@
 import 'api/client.dart';
-import 'model.dart';
 import 'websocket/client.dart';
 
 class UpBit {
